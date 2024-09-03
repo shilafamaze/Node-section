@@ -62,13 +62,13 @@ const server = http.createServer( async(req, res) => {
             
             console.log("name :",datas.name);
             console.log("email :",datas.email);
-            console.log("Password :",datas.password);
+            console.log("Password :",datas.pass);
 
             //save to a database
        collection.insertOne({
         name : datas.name,
         email : datas.email,
-        password :datas.password
+        password :datas.pass
        })
 
        .then((message) =>{
